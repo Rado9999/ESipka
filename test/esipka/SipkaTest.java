@@ -24,7 +24,7 @@ public SipkaTest() {
 
 @BeforeClass
 public static void setUpClass() {
-    CM.setStepAndSize(200, 5, 5);
+    CM.setStepAndSize(200,5,5);
 }
 
 @AfterClass
@@ -49,18 +49,13 @@ public void tearDown() {
         
         instance.vpred();
         instance.vpred();
-
         instance.vlavoBok();
         instance.vlavoBok();
         instance.vpred();
         instance.vlavoBok();
-
         instance.vpred();
-        instance.vlavoBok();
-        instance.vpred();
-        instance.vlavoBok();
-        instance.vpred();
-        IO.inform("OK?");
+        
+        IO.inform("QQQ");
     }
 
     /**
@@ -70,7 +65,9 @@ public void tearDown() {
     public void testVlavoBok() {
         System.out.println("vlavoBok");
         Sipka instance = new Sipka();
-        instance.vlavoBok();
+        ISipka expResult = null;
+        ISipka result = instance.vlavoBok();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
