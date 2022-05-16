@@ -106,7 +106,7 @@ public ISipka vlavoBok() {
     }
 
     //********************
-    public class NSipka implements ISipka, IModular {
+    private class NSipka implements ISipka, IModular {
 
 private final Multishape multishape;
 private final Mover mover = new Mover(5);
@@ -168,7 +168,7 @@ public void paint(Painter painter) {
 }
 
 //*********************************************
-public class WSipka implements ISipka, IModular {
+private class WSipka implements ISipka, IModular {
 
 private final Multishape multishape;
 private final Mover mover = new Mover(5);
@@ -230,7 +230,7 @@ public void paint(Painter painter) {
 }
 }
 //**************************************
-public class SSipka implements ISipka, IModular {
+private class SSipka implements ISipka, IModular {
 
 private final Multishape multishape;
 private final Mover mover = new Mover(5);
