@@ -44,12 +44,12 @@ public ISipka vlavoBok() {
     private final Mover mover = new Mover(8);
     private final int STEP = CM.getStep();
 
-    public ESipka() {
+    private ESipka() {
 
         this(0, 0);
     }
 
-    public ESipka(int x, int y) {
+    private ESipka(int x, int y) {
 
         Triangle body1 = new Triangle(x, y, STEP, STEP, NamedColor.RED, Direction8.EAST);
 
