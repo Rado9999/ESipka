@@ -10,7 +10,7 @@ import cz.pecinovsky.canvasmanager.IModular;
  *
  * @author RadoK
  */
-public interface ISipka {
+public interface ISipka extends IModular{
     public void vpred();
     public ISipka vlavoBok();
 }

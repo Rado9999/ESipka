@@ -8,7 +8,7 @@ package esipka;
  *
  * @author RadoK
  */
-public class Sipka implements ISipka {
+public class Sipka {
 
 private ISipka sipka;
 
@@ -16,12 +16,12 @@ public Sipka() {
     this.sipka = new ESipka();
 }
 
-@Override
+
 public void vpred() {
     sipka.vpred();
 }
 
-@Override
+
 public ISipka vlavoBok() {
     sipka = sipka.vlavoBok();
     return null;

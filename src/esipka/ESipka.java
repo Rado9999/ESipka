@@ -4,24 +4,17 @@
  */
 package esipka;
 
-import cz.pecinovsky.canvasmanager.IModular;
-import cz.pecinovsky.canvasmanager.Mover;
 import cz.pecinovsky.canvasmanager.Multishape;
-import cz.pecinovsky.canvasmanager.Painter;
 import cz.pecinovsky.canvasmanager.Triangle;
 import cz.pecinovsky.util.Direction8;
 import cz.pecinovsky.util.NamedColor;
-import cz.pecinovsky.util.Position;
 
 /**
  *
  * @author RadoK
  */
-public class ESipka implements ISipka, IModular {
+public class ESipka extends ASipka {
 
-private final Multishape multishape;
-private final Mover mover = new Mover(8);
-private final int STEP = CM.getStep();
 
 public ESipka() {
 
@@ -35,51 +28,25 @@ public ESipka(int x, int y) {
     multishape = new Multishape(body1);
     CM.add(this);
 }
-@Override
-public void vpred() {
-    mover.moveBy(STEP, 0, this);
-}
+
 
 @Override
 public ISipka vlavoBok() {
-    int x = multishape.getX();
-    int y = multishape.getY();
-    
+
+    setCoordinates();
     NSipka sip = new NSipka(x,y);
-    CM.add(sip);
-    CM.remove(this);
     
+    CM.remove(this);
+      
     return sip;
 }
 
 @Override
-public int getModule() {
-    //TODO
-    throw new UnsupportedOperationException("Not supported yet.");
-    // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-}
+public void vpred() {
+    mover.moveBy(STEP, 0, this);
+}  
 
-@Override
-public void setModule(int module) {
-    //TODO
-    throw new UnsupportedOperationException("Not supported yet.");
-    // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-}
 
-@Override
-public Position getPosition() {
 
-    return multishape.getPosition();
-}
-
-@Override
-public void setPosition(int x, int y) {
-    multishape.setPosition(x, y);
-}
-
-@Override
-public void paint(Painter painter) {
-    multishape.paint(painter);
-}
 
 }
