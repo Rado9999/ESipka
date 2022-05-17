@@ -4,15 +4,11 @@
  */
 package esipka;
 
-import cz.pecinovsky.canvasmanager.IModular;
 import static cz.pecinovsky.canvasmanager.IPaintable.CM;
-import cz.pecinovsky.canvasmanager.Mover;
 import cz.pecinovsky.canvasmanager.Multishape;
-import cz.pecinovsky.canvasmanager.Painter;
 import cz.pecinovsky.canvasmanager.Triangle;
 import cz.pecinovsky.util.Direction8;
 import cz.pecinovsky.util.NamedColor;
-import cz.pecinovsky.util.Position;
 
 /**
  *
